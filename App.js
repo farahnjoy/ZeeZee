@@ -3,6 +3,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Ionicons } from '@expo/vector-icons'; // Assuming you use Expo
+import { View, StyleSheet } from 'react-native';
+import { Image } from 'react-native';
 
 import LoginScreen from './LoginScreen';
 import SignupScreen from './SignupScreen';
@@ -21,8 +23,14 @@ function TabNavigator() {
       screenOptions={({ route }) => ({
         tabBarActiveTintColor: '#991044',
         tabBarInactiveTintColor: '#333',
-        tabBarStyle: { backgroundColor: '#f5f5f5' },
-        headerTitle: 'ZeeZee', // Static app name
+        tabBarStyle: { backgroundColor: '#f4f4f4' }, //tab bottom color
+         headerTitle: () => (
+          <Image
+            source={require('./assets/ZeeZeeLogo.png')} // Replace with your image path
+            style={{ width: 100, height: 40 }} // Adjust size of the image as needed
+          />
+        ),
+        headerStyle: {backgroundColor: '#1d1447'},
         headerTitleAlign: 'center',
         tabBarIcon: ({ color, size }) => {
           let iconName;

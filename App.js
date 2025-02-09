@@ -31,7 +31,7 @@ function TabNavigator() {
         tabBarStyle: { backgroundColor: '#f4f4f4' }, // Tab bottom color
         headerTitle: () => (
           <Image
-            source={require('./assets/zeezee.png')}
+            source={require('./assets/ZeeZeeLogo.png')}
             style={{ width: 100, height: 40 }} // Adjust size of the image as needed
           />
         ),

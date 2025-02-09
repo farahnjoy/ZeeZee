@@ -6,7 +6,7 @@ const SignupScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View style={styles.logoContainer}>
-                <Image source={require('./assets/DragonLogo.png')} style={{ width: 350, height: 175 }} />
+                <Image source={require('./assets/sleeping-dragon.png')} style={{ width: 350, height: 175 }} />
             </View>
 
             {/* Welcome Text */}

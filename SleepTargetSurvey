@@ -9,7 +9,6 @@ const SleepTargetSurvey = ({ navigation, route }) => {
         <View style={styles.container}>
             <Text style={styles.title}>Set Your Target Sleep Hours</Text>
 
-            {/* Scrollable Timeline for Sleep Target */}
             <ScrollView 
                 horizontal 
                 style={styles.scrollContainer} 
@@ -20,7 +19,7 @@ const SleepTargetSurvey = ({ navigation, route }) => {
                         key={hour}
                         style={[
                             styles.button,
-                            targetSleepHours === hour && styles.selectedButton, // Highlight selected button
+                            targetSleepHours === hour && styles.selectedButton, 
                         ]}
                         onPress={() => setTargetSleepHours(hour)} // Update target sleep hours on press
                     >
@@ -29,14 +28,12 @@ const SleepTargetSurvey = ({ navigation, route }) => {
                 ))}
             </ScrollView>
 
-            {/* Display selected target sleep hours */}
             <Text style={styles.targetSleepHoursText}>{targetSleepHours} hrs</Text>
 
-            {/* Next Button to navigate to SleepSatisfaction */}
             <TouchableOpacity 
                 style={styles.cloudButton} 
                 onPress={() => {
-                    navigation.navigate('Sleep Satisfaction', { targetSleepHours });  // Pass the selected sleep target to the next screen
+                    navigation.navigate('Sleep Satisfaction', { targetSleepHours });  
                 }}
             >
                 <Ionicons name="arrow-forward" size={24} color="#fff" />

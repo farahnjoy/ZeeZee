@@ -76,7 +76,7 @@ function calculateSleepScore(age, sleepMetrics, desiredSleep) {
     return Math.round(Math.max(0, Math.min(sleepScore, 100)));
 }
 
-export default function HomeScreen() {
+export default function ProfileScreen() {
   const [age, setAge] = useState('');
   const [sleepStart, setSleepStart] = useState('');
   const [sleepEnd, setSleepEnd] = useState('');
